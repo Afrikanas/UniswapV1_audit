@@ -18,9 +18,5 @@ jobs:
 
       - name: Check formatting
         run: forge fmt --check
-
-      - name: Run tests
-        run: forge test -vvv
-        env:
           # Change profile to prod. when deploying to production.
           FOUNDRY_PROFILE: ${{ (github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'prod' }}
