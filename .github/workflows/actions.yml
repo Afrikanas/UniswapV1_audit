@@ -20,6 +20,6 @@ jobs:
         run: forge fmt --check
 
      - name: Run tests
-        run: forge test --fork-url $MAINNET_RPC_URL -vvvv
+        run: forge test --fork-url $MAINNET_RPC -vvvv
         env:
-          MAINNET_RPC_URL: ${{ secrets.MAINNET_RPC_URL }}
+          MAINNET_RPC: ${{ secrets.MAINNET_RPC_URL }}
