@@ -17,6 +17,6 @@ jobs:
           version: nightly
 
       - name: Run tests
+        run: forge test -vvvvv
         env:
           MAINNET_RPC: ${{ secrets.MAINNET_RPC_URL }}
-        run: forge test -vvvvv
